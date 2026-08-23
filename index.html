@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     
-    <!-- MONETAG SCRIPT REPLACED WITH YOURS -->
+    <!-- MONETAG SCRIPT -->
     <script src='//libtl.com/sdk.js' data-zone='11636201' data-sdk='show_11636201'></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -276,13 +276,14 @@
 
     <script>
         // --- API CONFIGURATION ---
-        // Your specific Supabase URL without '/rest/v1/' to ensure JS SDK works perfectly
         const SUPABASE_URL = 'https://vwvliozopzxlqeghssos.supabase.co'; 
         const SUPABASE_ANON_KEY = 'sb_publishable_emFm2HcGBVIx-z7su88itA_a9FdtCKI';
         const VERCEL_API_URL = 'https://urlshortlinks-ruby.vercel.app/api'; 
         
+        // --- YAHAN AAPKA DIRECT LINK SHORT NAME ADD KIYA GAYA HAI ---
         const BOT_USERNAME = 'urlshortlinks_bot'; 
-        const APP_SHORT_NAME = 'app'; // Standard mini app short name
+        const APP_SHORT_NAME = 'httpsurlshortlinksrubyverce'; 
+        // -------------------------------------------------------------
         
         let dbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         let currentUserData = null;
@@ -598,7 +599,6 @@
         }
 
         function checkAdBlocker(btn, timerEl) {
-            // MONETAG CHECKER REPLACED WITH YOURS
             if (typeof show_11636201 === 'undefined') {
                 document.getElementById('ad-blocker-warning').classList.remove('hidden');
                 document.getElementById('ad-step-title').innerText = "Action Required";
@@ -613,8 +613,6 @@
         function executeAdClick() {
             const btn = document.getElementById('btn-watch-ad'); btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Loading Ad...`;
             document.getElementById('ad-loader-ring').classList.remove('hidden'); document.getElementById('ad-timer-text').classList.add('hidden');
-            
-            // MONETAG EXECUTION REPLACED WITH YOURS
             if (typeof show_11636201 === 'function') { show_11636201().then(() => { handleAdSuccess(); }).catch(() => { handleAdSuccess(); }); }
         }
 
