@@ -1,1 +1,25 @@
-
+{
+  "name": "urlshortlinks-backend",
+  "version": "1.0.0",
+  "description": "Backend Serverless API for TeleShort Earning App",
+  "main": "api/reward.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "keywords": [
+    "telegram",
+    "mini-app",
+    "vercel",
+    "supabase",
+    "url-shortener"
+  ],
+  "author": "TeleAdmin",
+  "license": "MIT"
+}
